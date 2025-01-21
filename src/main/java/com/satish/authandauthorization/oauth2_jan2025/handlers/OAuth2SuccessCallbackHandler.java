@@ -36,6 +36,7 @@ public class OAuth2SuccessCallbackHandler extends SimpleUrlAuthenticationSuccess
 
         }else{
             // user is not present and we need to save the user in the database
+            System.out.println(name+" is trying to sign up");
             userService.save(user);
         }
         super.onAuthenticationSuccess(request, response, authentication);
